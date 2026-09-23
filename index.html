@@ -38,10 +38,10 @@
     </script>
     <style>
         .hero-pattern {
-            background-image: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            transition: background-image 1.5s ease-in-out;
         }
     </style>
 </head>
@@ -97,7 +97,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-pattern min-h-screen flex items-center relative pt-20">
+    <header id="home" class="hero-pattern min-h-screen flex items-center relative pt-20" style="background-image: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('assets/hero-1.jpg');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-blue mb-6">
@@ -511,6 +511,20 @@
             alert('Formulário enviado com sucesso! Nossa equipe comercial entrará em contato em breve.');
             this.reset();
         });
+
+        // Carrossel do Hero
+        const heroImages = [
+            'assets/hero-1.jpg',
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80'
+        ];
+        let currentHeroImage = 0;
+        const heroSection = document.getElementById('home');
+
+        setInterval(() => {
+            currentHeroImage = (currentHeroImage + 1) % heroImages.length;
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('${heroImages[currentHeroImage]}')`;
+        }, 5000); // Troca a cada 5 segundos
     </script>
 </body>
 </html>
