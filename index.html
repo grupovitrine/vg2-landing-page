@@ -59,14 +59,14 @@
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Home</a>
-                    <a href="#sobre" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Sobre</a>
-                    <a href="#produtos" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Serviços PRFV</a>
-                    <a href="#caldeiraria" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Caldeiraria</a>
-                    <a href="#seguranca" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Segurança</a>
-                    <a href="#contato" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Contato</a>
-                    <a href="#contato" class="bg-brand-blue hover:bg-blue-600 text-white px-6 py-2 rounded-md font-semibold transition shadow-lg shadow-brand-blue/30 text-sm">
+                <div class="hidden md:flex items-center space-x-8 uppercase tracking-wide">
+                    <a href="#home" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Home</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Sobre</a>
+                    <a href="#produtos" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Serviços PRFV</a>
+                    <a href="#caldeiraria" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Caldeiraria</a>
+                    <a href="#seguranca" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Segurança</a>
+                    <a href="#contato" class="text-gray-300 hover:text-brand-blue transition font-semibold text-xs">Contato</a>
+                    <a href="#contato" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-bold transition shadow-lg shadow-blue-600/30 text-xs">
                         Solicitar Orçamento
                     </a>
                 </div>
@@ -82,14 +82,14 @@
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-slate-700">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Home</a>
-                <a href="#sobre" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Sobre</a>
-                <a href="#produtos" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Serviços PRFV</a>
-                <a href="#caldeiraria" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Caldeiraria</a>
-                <a href="#seguranca" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Segurança</a>
-                <a href="#contato" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Contato</a>
-                <a href="#contato" class="block w-full text-center mt-4 bg-brand-blue hover:bg-blue-600 text-white px-6 py-3 rounded-md font-semibold transition">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 uppercase tracking-wide">
+                <a href="#home" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Home</a>
+                <a href="#sobre" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Sobre</a>
+                <a href="#produtos" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Serviços PRFV</a>
+                <a href="#caldeiraria" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Caldeiraria</a>
+                <a href="#seguranca" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Segurança</a>
+                <a href="#contato" class="block px-3 py-2 text-sm font-semibold text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Contato</a>
+                <a href="#contato" class="block w-full text-center mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition">
                     Solicitar Orçamento
                 </a>
             </div>
@@ -97,7 +97,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-pattern min-h-screen flex items-center relative pt-20" style="background-image: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('assets/hero-1.jpg');">
+    <header id="home" class="hero-pattern min-h-screen flex items-center relative pt-20" style="background-image: linear-gradient(rgba(0, 31, 63, 0.65), rgba(0, 31, 63, 0.80)), url('assets/hero-1.jpg');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-blue mb-6">
@@ -523,7 +523,7 @@
 
         setInterval(() => {
             currentHeroImage = (currentHeroImage + 1) % heroImages.length;
-            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('${heroImages[currentHeroImage]}')`;
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 31, 63, 0.65), rgba(0, 31, 63, 0.80)), url('${heroImages[currentHeroImage]}')`;
         }, 5000); // Troca a cada 5 segundos
     </script>
 </body>
