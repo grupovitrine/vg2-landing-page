@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VG2 Fiberglass - Soluções Industriais de Alta Performance em PRFV e Caldeiraria. Sucessora da Varoglass.">
+    <title>VG2 Fiberglass - PRFV e Caldeiraria Industrial</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#001F3F',     /* Azul Marinho Corporativo */
+                            blue: '#00A8E8',     /* Azul Claro Vibrante */
+                            red: '#FF3366',      /* Vermelho Sútil */
+                            light: '#f8f9fa',    /* Cinza Claro */
+                            gray: '#343a40'      /* Texto Escuro */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.95)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-gray bg-brand-light antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tighter">
+                        VG2 <span class="text-brand-blue">Fiberglass</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Home</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Sobre</a>
+                    <a href="#produtos" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Serviços PRFV</a>
+                    <a href="#caldeiraria" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Caldeiraria</a>
+                    <a href="#seguranca" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Segurança</a>
+                    <a href="#contato" class="text-gray-300 hover:text-brand-blue transition font-medium text-sm">Contato</a>
+                    <a href="#contato" class="bg-brand-blue hover:bg-blue-600 text-white px-6 py-2 rounded-md font-semibold transition shadow-lg shadow-brand-blue/30 text-sm">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Home</a>
+                <a href="#sobre" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Sobre</a>
+                <a href="#produtos" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Serviços PRFV</a>
+                <a href="#caldeiraria" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Caldeiraria</a>
+                <a href="#seguranca" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Segurança</a>
+                <a href="#contato" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-800 rounded-md">Contato</a>
+                <a href="#contato" class="block w-full text-center mt-4 bg-brand-blue hover:bg-blue-600 text-white px-6 py-3 rounded-md font-semibold transition">
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-pattern min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/30 text-brand-blue mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-blue animate-pulse"></span>
+                    <span class="text-sm font-semibold tracking-wide uppercase">Sucessora da Varoglass</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Soluções Industriais de Alta Performance em <span class="text-brand-blue">PRFV e Caldeiraria</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+                    Unimos tradição, segurança e engenharia avançada para atender indústrias químicas, de fertilizantes e o setor industrial pesado com excelência inquestionável.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="https://wa.me/5500000000000" target="_blank" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-md font-bold transition text-lg shadow-lg shadow-green-600/30">
+                        <i class="fab fa-whatsapp text-xl"></i> Fale com um Engenheiro
+                    </a>
+                    <a href="#" class="flex items-center justify-center gap-2 bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 rounded-md font-bold transition text-lg">
+                        <i class="fas fa-file-pdf"></i> Baixar Apresentação
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-slate-700/50">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-brand-navy p-3 rounded-lg text-brand-blue shadow-inner border border-slate-700">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Segurança Rigorosa</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-brand-navy p-3 rounded-lg text-brand-blue shadow-inner border border-slate-700">
+                            <i class="fas fa-hard-hat text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Mão de Obra Especializada</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-brand-navy p-3 rounded-lg text-brand-blue shadow-inner border border-slate-700">
+                            <i class="fas fa-map-marked-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold">Atendimento Nacional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h4 class="text-brand-blue font-bold tracking-wider uppercase mb-2">Quem Somos</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-6">Tradição e Inovação na Indústria Brasileira</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        A <strong>VG2 Fiberglass</strong> nasce como a orgulhosa sucessora da tradicional <em>Varoglass</em>. Carregamos um legado de décadas de excelência em materiais e equipamentos em PRFV (Plástico Reforçado com Fibra de Vidro), caldeiraria e serviços industriais de alta complexidade.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nosso foco absoluto é fornecer soluções duráveis que resistam aos ambientes mais agressivos, como indústrias químicas e fábricas de fertilizantes, mantendo rigorosos padrões de segurança e qualidade.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="text-brand-red mt-1"><i class="fas fa-bullseye text-xl"></i></div>
+                            <div>
+                                <h5 class="font-bold text-brand-navy">Missão & Objetivos</h5>
+                                <p class="text-sm text-gray-600">Prover excelência em engenharia e manutenção industrial, garantindo durabilidade e eficiência operacional para nossos clientes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-brand-blue mt-1"><i class="fas fa-eye text-xl"></i></div>
+                            <div>
+                                <h5 class="font-bold text-brand-navy">Visão</h5>
+                                <p class="text-sm text-gray-600">Ser a principal referência nacional em PRFV e caldeiraria para o setor industrial pesado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Instalação Industrial" class="rounded-lg shadow-2xl z-10 relative">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-blue/10 rounded-full z-0 blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-full h-full border-4 border-brand-navy rounded-lg z-0 translate-x-4 translate-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos e Serviços em PRFV -->
+    <section id="produtos" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h4 class="text-brand-blue font-bold tracking-wider uppercase mb-2">Especialidade Core</h4>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">Soluções Completas em PRFV</h2>
+                <p class="text-gray-600">Alta resistência química e mecânica para garantir a integridade dos seus processos industriais.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-brand-navy overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fabricação PRFV" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center text-brand-blue mb-6">
+                            <i class="fas fa-industry text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Fabricação de Materiais</h3>
+                        <p class="text-gray-600 mb-6">Desenvolvimento e fabricação sob medida de equipamentos, tubulações e conexões em Plástico Reforçado com Fibra de Vidro (PRFV).</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-brand-navy overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mão de Obra PRFV" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center text-brand-blue mb-6">
+                            <i class="fas fa-tools text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Mão de Obra Especializada</h3>
+                        <p class="text-gray-600 mb-6">Equipe técnica altamente qualificada para laminação, reparos e montagem industrial in loco, seguindo rigorosos padrões de qualidade.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100 group relative">
+                    <div class="absolute top-0 right-0 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg z-10">ALTA DEMANDA</div>
+                    <div class="h-48 bg-brand-navy overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Parada Geral" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-12 h-12 bg-brand-blue/10 rounded-lg flex items-center justify-center text-brand-blue mb-6">
+                            <i class="fas fa-stopwatch text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3">Parada Geral Industrial</h3>
+                        <p class="text-gray-600 mb-6">Gestão e execução eficiente de manutenções preventivas e corretivas em PRFV durante paradas programadas de fábricas e plantas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caldeiraria e Serviços -->
+    <section id="caldeiraria" class="py-24 bg-brand-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h4 class="text-brand-blue font-bold tracking-wider uppercase mb-2">Expertise Técnica</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Caldeiraria e Serviços Especializados</h2>
+                    <p class="text-gray-300">Soluções robustas em metalurgia e gerenciamento de projetos para complementar nossa expertise em compósitos.</p>
+                </div>
+                <div>
+                    <a href="#contato" class="inline-flex items-center gap-2 bg-transparent border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-6 py-3 rounded-md font-semibold transition">
+                        Solicitar Escopo Técnico <i class="fas fa-file-signature"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group">
+                    <i class="fas fa-project-diagram text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Planejamento & Projeto</h3>
+                    <p class="text-sm text-gray-400">Gerenciamento completo do ciclo de vida do projeto.</p>
+                </div>
+                
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group">
+                    <i class="fas fa-cogs text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Engenharia Reversa</h3>
+                    <p class="text-sm text-gray-400">Nacionalização de equipamentos com extrema precisão.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group">
+                    <i class="fas fa-sync-alt text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Retrofit Industrial</h3>
+                    <p class="text-sm text-gray-400">Modernização e adequação às normas atuais.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group">
+                    <i class="fas fa-wrench text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Manutenção</h3>
+                    <p class="text-sm text-gray-400">Intervenções preventivas, preditivas e corretivas.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group">
+                    <i class="fas fa-building text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Estrutura Metálica</h3>
+                    <p class="text-sm text-gray-400">Fabricação e montagem de pipe racks e suportes.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group lg:col-span-2">
+                    <i class="fas fa-ruler-combined text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Tubulações (Spool's)</h3>
+                    <p class="text-sm text-gray-400">Fabricação e soldagem qualificada de tubulações em Aço Carbono (AC), Aço Inoxidável e PEAD.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="bg-slate-800/50 border border-slate-700 p-6 rounded-lg hover:border-brand-blue transition group lg:col-span-1">
+                    <i class="fas fa-database text-3xl text-brand-blue mb-4 group-hover:scale-110 transition"></i>
+                    <h3 class="font-bold text-lg mb-2">Equipamentos</h3>
+                    <p class="text-sm text-gray-400">Tanques, Filtros, Vasos de Pressão e Trocadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segurança do Trabalho -->
+    <section id="seguranca" class="py-20 bg-brand-red text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/3 text-center lg:text-left">
+                    <i class="fas fa-shield-check text-6xl mb-6 text-white opacity-90"></i>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Segurança Inegociável</h2>
+                </div>
+                <div class="lg:w-2/3 border-t lg:border-t-0 lg:border-l-2 border-white/30 pt-8 lg:pt-0 lg:pl-12">
+                    <p class="text-xl font-light mb-6">
+                        Na VG2 Fiberglass, a vida e a integridade de nossa equipe e clientes estão acima de qualquer prazo ou produção nas operações e paradas gerais.
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> Conformidade com NR's</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> Treinamentos Constantes</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> PPRA e PCMSO Rigorosos</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> EPI/EPC de Alta Performance</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> Análise de Risco Operacional</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand-navy"></i> Zero Acidentes em Paradas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes (Social Proof) -->
+    <section id="clientes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h4 class="text-brand-blue font-bold tracking-wider uppercase mb-2">Credibilidade B2B</h4>
+            <h2 class="text-3xl font-extrabold text-brand-navy mb-12">Setores que Confiam em Nós</h2>
+            
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+                <div class="text-center w-32">
+                    <i class="fas fa-flask text-4xl mb-3 text-brand-navy"></i>
+                    <p class="font-semibold text-sm">Química</p>
+                </div>
+                <div class="text-center w-32">
+                    <i class="fas fa-leaf text-4xl mb-3 text-brand-navy"></i>
+                    <p class="font-semibold text-sm">Fertilizantes</p>
+                </div>
+                <div class="text-center w-32">
+                    <i class="fas fa-tint text-4xl mb-3 text-brand-navy"></i>
+                    <p class="font-semibold text-sm">Saneamento</p>
+                </div>
+                <div class="text-center w-32">
+                    <i class="fas fa-oil-can text-4xl mb-3 text-brand-navy"></i>
+                    <p class="font-semibold text-sm">Óleo & Gás</p>
+                </div>
+                <div class="text-center w-32">
+                    <i class="fas fa-box text-4xl mb-3 text-brand-navy"></i>
+                    <p class="font-semibold text-sm">Papel e Celulose</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Footer -->
+    <section id="contato" class="bg-brand-navy pt-24 pb-12 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white mb-6">Vamos Construir Juntos</h2>
+                    <p class="mb-10 text-gray-400">Nossa equipe de engenharia está pronta para analisar seu projeto e propor a melhor solução técnica e comercial.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-brand-blue flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">E-mail Comercial</h4>
+                                <a href="mailto:comercial@vg2fiberglass.com.br" class="hover:text-brand-blue transition">comercial@vg2fiberglass.com.br</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-brand-blue flex-shrink-0">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Website Oficial</h4>
+                                <a href="https://vg2fiberglass.com.br" class="hover:text-brand-blue transition">vg2fiberglass.com.br</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center text-brand-blue flex-shrink-0">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">LinkedIn</h4>
+                                <a href="#" class="hover:text-brand-blue transition">VG2 Fiberglass Oficial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-brand-navy mb-6">Solicitar Orçamento</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                                <input type="text" id="nome" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy" required>
+                            </div>
+                            <div>
+                                <label for="empresa" class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                                <input type="text" id="empresa" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy" required>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail Corporativo</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy" required>
+                            </div>
+                            <div>
+                                <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="segmento" class="block text-sm font-medium text-gray-700 mb-1">Segmento Industrial</label>
+                            <select id="segmento" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy bg-white" required>
+                                <option value="">Selecione...</option>
+                                <option value="quimica">Química</option>
+                                <option value="fertilizantes">Fertilizantes</option>
+                                <option value="oleo_gas">Óleo e Gás</option>
+                                <option value="papel_celulose">Papel e Celulose</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem / Escopo do Projeto</label>
+                            <textarea id="mensagem" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-brand-blue focus:border-brand-blue text-brand-navy" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-md transition duration-300 shadow-md shadow-brand-blue/30">
+                            Enviar Solicitação
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 VG2 Fiberglass. Todos os direitos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Políticas de Privacidade</a>
+                    <a href="#" class="hover:text-white transition">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript para interatividade básica -->
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar num link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-navy', 'shadow-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.add('bg-transparent');
+                navbar.classList.remove('bg-brand-navy', 'shadow-lg');
+            }
+        });
+        
+        // Disparar evento no scroll para quando a página carrega não no topo
+        window.dispatchEvent(new Event('scroll'));
+
+        // Prevenção de envio de formulário e feedback
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso! Nossa equipe comercial entrará em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
