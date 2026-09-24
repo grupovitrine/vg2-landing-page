@@ -506,10 +506,25 @@
         // Disparar evento no scroll para quando a página carrega não no topo
         window.dispatchEvent(new Event('scroll'));
 
-        // Prevenção de envio de formulário e feedback
+        // Envio do formulário direto para o WhatsApp do Jorge
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Formulário enviado com sucesso! Nossa equipe comercial entrará em contato em breve.');
+            
+            const nome = document.getElementById('nome').value;
+            const empresa = document.getElementById('empresa').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const segmento = document.getElementById('segmento');
+            const segmentoTexto = segmento.options[segmento.selectedIndex].text;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            const texto = `*NOVA SOLICITAÇÃO DE ORÇAMENTO (Site VG2)*\n\n*Nome:* ${nome}\n*Empresa:* ${empresa}\n*E-mail:* ${email}\n*Telefone:* ${telefone}\n*Segmento:* ${segmentoTexto}\n\n*Mensagem/Escopo:*\n${mensagem}`;
+            
+            const numeroWhatsApp = "5512996662068";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+            
+            window.open(url, '_blank');
+            
             this.reset();
         });
 
